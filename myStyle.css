@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: DMY;
+    src: url(/assets/fonts/Poppins-Bold.ttf);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.boxprops {
+    box-sizing: border-box;
+    z-index: auto;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: #F0F0F0;
+}
+
+main {
+    background-color: #FFF;
+    border-radius: 30px 30px 170px 30px;
+}
+
+.contentContainer {
+    width: 500px;
+    height: 100%;
+}
+
+/* Part Input */
+
+.inputComponent p {
+    color: #8C8C8C;
+    font-family: DMY;
+    letter-spacing: 2px;
+}
+
+input[type="text"] {
+    border: 1px solid #DEDEDE;
+    border-radius: 5px;
+}
+
+.submitContainer {
+    width: 52vw;
+    height: 50px;
+    align-items: center;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #EDEDED;
+}
+
+#Submit {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-color: #864DFF;
+    border: 0;
+    border-radius: 50px;
+    font-size: 40px;
+    color: #FFF;
+    padding-bottom: 10px;
+}
+
+#Submit:hover {
+    background-color: #000;
+}
+
+/* ------------ Web Screen Size -------------- */
+
+@media (min-width: 768px) {
+    main {
+        width: 50vw;
+        height: 70vh;
+        margin: 120px auto 20px auto;
+        padding: 50px;
+    }
+
+    .contentContainer {
+        justify-content: center;
+    }
+
+    /* Part Input */
+
+    .inputComponent p {
+        font-size: 0.6em;
+        font-weight: 200;
+        margin-bottom: 6px;
+        padding-left: 2px;
+    }
+
+    .inputComponent input {
+        width: min(100px, 105px);
+        height: min(40px, 45px);
+        padding: 10px 20px;
+        font-size: 24px;
+        font-family: DMY;
+    }
+
+    #dayInput, #monthInput {
+        margin: 0 23px 0 0;
+    }
+
+    /* Part Footer */
+
+    .attribution {
+        font-size: .8em;
+        margin-top: 20px;
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
+/* ------------ Mobile Screen Size -------------- */
+
+
+@media (max-width: 767px) {
+    main {
+        width: min(90vw, 95vw);
+        height: min(80vh, 85vh);
+        margin: 50px auto 20px auto;
+    }
+
+    .contentContainer {
+        align-items: center;
+    }
+
+    .inputContainer {
+        margin: auto;
+    }
+
+    .inputComponent p {
+        font-size: 0.8em;
+        font-weight: 500;
+    }
+
+    .inputComponent input {
+        width: min(60px, 105px);
+        height: min(26px, 45px);
+        padding: 10px;
+        font-size: 24px;
+        font-family: DMY;
+    }
+
+    #dayInput, #monthInput {
+        margin: 2px 23px 0 0;
+    }
+
+    .attribution {
+        font-size: .3em;
+        margin-top: 20px;
+        text-align: center;
+        padding: 0 10px;
+    }
+}

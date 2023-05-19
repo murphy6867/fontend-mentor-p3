@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="/myStyle.css">
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body>
+  <main role="main" class="boxprops">
+    <div class="contentContainer flex-col boxprops">
+      <div class="inputContainer flex-row boxprops">
+          <div class="day inputComponent">
+            <p>DAY</p>
+            <input type="text" name="day_input" id="dayInput" pattern="[0-9]*" min="1" max="31" placeholder="DD" />
+          </div>
+          <div class="month inputComponent">
+            <p>MONTH</p>
+            <input type="text" name="month_input" id="monthInput" pattern="[0-9]*" min="1" max="12" placeholder="MM" />
+          </div>
+          <div class="year inputComponent">
+            <p>YEAR</p>
+            <input type="text" name="year_input" id="yearInput" pattern="[0-9]*" min="0" max="2024" placeholder="YYYY" />
+          </div>
+      </div>
+      <div class="submitContainer flex-row">
+        <div class="line"></div>
+        <div class="submitComponent">
+          <input type="submit" value="↓" id="Submit">
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" style="text-decoration:none">Frontend Mentor</a>. 
+    Coded by <a href="https://www.linkedin.com/in/murphy6867/" target="_blank" style="text-decoration:none">Sonsawan Ngamsom</a>.
+  </footer>
+</body>
+</html>

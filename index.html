@@ -8,28 +8,26 @@
   <title>Frontend Mentor | Age calculator app</title>
 </head>
 <body>
-  <main role="main" class="boxprops">
+  <main role="main">
     <div class="contentContainer flex-col boxprops">
-      <div class="inputContainer flex-row boxprops">
-          <div class="day inputComponent">
-            <p>DAY</p>
-            <input type="text" name="day_input" id="dayInput" pattern="[0-9]*" min="1" max="31" placeholder="DD" />
-          </div>
-          <div class="month inputComponent">
-            <p>MONTH</p>
-            <input type="text" name="month_input" id="monthInput" pattern="[0-9]*" min="1" max="12" placeholder="MM" />
-          </div>
-          <div class="year inputComponent">
-            <p>YEAR</p>
-            <input type="text" name="year_input" id="yearInput" pattern="[0-9]*" min="0" max="2024" placeholder="YYYY" />
-          </div>
-      </div>
-      <div class="submitContainer flex-row">
-        <div class="line"></div>
-        <div class="submitComponent">
-          <input type="submit" value="↓" id="Submit">
+      <form action="" method="" enctype="application/x-www-form-urlencoded" class="formContainer">
+        <div class="item item-1 flex-col">
+          <label for="day">DAY</label>
+          <input type="number" name="day" id="day" min="1" max="31" placeholder="DD" required />
         </div>
-      </div>
+        <div class="item item-2 flex-col">
+          <label for="month">MONTH</label>
+          <input type="number" name="month" id="month" min="1" max="12" placeholder="MM" required />
+        </div>
+        <div class="item item-3 flex-col">
+          <label for="year">YEAR</label>
+          <input type="number" name="year" id="year" min="1900" max="2099" placeholder="YYYY" required />
+        </div>
+        <div class="item item-4 flex-row center">
+          <div class="line"></div>
+          <input type="submit" value="Submit">
+        </div>
+      </form>
     </div>
   </main>
   <footer class="attribution">

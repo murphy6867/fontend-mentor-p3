@@ -13,6 +13,11 @@
     src: url(/assets/fonts/Poppins-ExtraBold.ttf);
 }
 
+@font-face {
+    font-family: RES;
+    src: url(/assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -65,7 +70,32 @@ footer {
     background-color: #FFFFFF;
 }
 
-/* Part Input */
+/* Hide the arrow spinner */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    /* Remove arrow spinner for Firefox */
+    -webkit-appearance: value; /* Vendor-prefixed version */
+    -moz-appearance: textfield; /* Vendor-prefixed version */
+    appearance: value; /* Standard property */
+}
+
+.line {
+    background-color: #F0F0F0;
+}
+
+.resultContainer {
+    font-family: RES;
+    padding: 0 20px;
+}
+
+#ResultYear, #ResultMonth, #ResultDay {
+    color: #884BFF;
+}
 
 /* ------------ Web Screen Size -------------- */
 
@@ -80,14 +110,15 @@ footer {
     .contentContainer {
         min-width: 700px;
         width: 1000px;
-        height: 700px;
-        padding: 50px;
+        height: 650px;
+        padding: 30px;
         border-radius: 10px 10px 150px 10px;
         margin: auto;
     }
 
     .formContainer {
-        display: grid; 
+        padding: 20px;
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr; 
         grid-template-rows: 1fr 1fr; 
         gap: 0px 0px; 
@@ -112,29 +143,53 @@ footer {
         font-size: clamp(0.3rem, -0.1071428571428571rem + 1.7857142857142856vw, 0.9rem);
     }
 
-    .item-1, .item-2 {
-        margin-right: 20px;
-    }
-
     #day, #month, #year {
-        min-width: 50px;
+        width: 120px;
+        min-width: 100px;
         padding: 9px 22px;
         font-size: 1.5rem;
         font-size: clamp(1.5rem, 0.7857142857142858rem + 1.488095238095238vw, 2.125rem);
         font-family: DMYNUM;
         border-radius: 7px;
         border: 1px solid #DDDDDD;
-    }
-
-    #day #month #year:hover {
-        border: 1px solid #9E8AD1;
+        margin-right: 10px;
     }
 
     .line {
-        width: 500px;
+        width: 760px;
+        min-width: 400px;
         height: 2px;
-        background-color: #EAEAEA;
-        color: yellow;
+    }
+
+    #SubmitButt {
+        width: 100px;
+        min-width: 100px;
+        height: 100px;
+        min-height: 80px;
+        border-radius: 120px;
+        border: none;
+        color: #FFF;
+        background-color: #884CFD;
+        font-size: 52px;
+    }
+
+    #SubmitButt:hover {
+        background-color: #000;
+    }
+
+    /* Part Result */
+
+    .resultContainer {
+        font-size: 1.5rem;
+        font-size: clamp(3rem, 0.7857142857142858rem + 1.488095238095238vw, 3rem);
+    }
+
+    .YMDContainer {
+        margin-top: -35px;
+    }
+    
+    #ResultYear, #ResultMonth, #ResultDay {
+        letter-spacing: 18px;
     }
 }
 
@@ -152,9 +207,88 @@ footer {
     .contentContainer {
         min-width: 200px;
         width: 600px;
-        height: 400px;
-        padding: 50px;
+        height: 500px;
+        padding: 40px 10px;
         border-radius: 20px 20px 100px 20px;
+        margin: auto;
     }
 
+    .formContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0 10px;
+    }
+
+    .item-1  {
+        max-width: 400px;
+    }
+
+    .item-4 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 65px 0;
+    }
+
+    label {
+        color: #868686;
+        letter-spacing: 2.5px;
+        margin: 0 0 7px 2px;
+        font-family: DMYLAB;
+        font-size: 0.7rem;
+        font-size: clamp(0.7rem, -0.1071428571428571rem + 1.7857142857142856vw, 1.5rem);
+    }
+
+    #day, #month, #year {
+        width: calc(38vw - 170px);
+        min-width: 55px;
+        padding: 9px 15px;
+        font-size: 1rem;
+        font-size: clamp(1rem, 0.7857142857142858rem + 1.488095238095238vw, 2.125rem);
+        font-family: DMYNUM;
+        border-radius: 7px;
+        border: 1px solid #DDDDDD;
+        margin-right: 10px;
+    }
+
+    #SubmitButt {
+        width: 65px;
+        min-width: 20px;
+        height: 65px;
+        min-height: 20px;
+        position: absolute;
+        border-radius: 120px;
+        border: none;
+        color: #FFF;
+        background-color: #884CFD;
+        font-size: 30px;
+    }
+
+    #SubmitButt:hover {
+        background-color: #000;
+    }
+
+    .line {
+        flex-grow: 1;
+        height: 2px;
+        margin: 0 10px;
+        position: relative;
+      }
+
+    /* Part Result */
+
+    .resultContainer {
+        font-size: 2.5rem;
+        font-size: clamp(1.6rem, 0.7857142857142858rem + 1.488095238095238vw, 2.5rem);
+        padding-top: 10px;
+    }
+
+    .YMDContainer {
+        margin-top: -15px;
+    }
+    
+    #ResultYear, #ResultMonth, #ResultDay {
+        letter-spacing: 7px;
+    }
 }

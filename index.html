@@ -11,7 +11,7 @@
 <body>
   <main role="main">
     <div class="contentContainer flex-col boxprops">
-      <form action="" method="" enctype="application/x-www-form-urlencoded" class="formContainer">
+      <form class="formContainer" onsubmit="event.preventDefault(); getDate()">
         <div class="item item-1 flex-col">
           <label for="day">DAY</label>
           <input type="number" name="day" id="day" min="1" max="31" placeholder="DD" required />
@@ -26,7 +26,7 @@
         </div>
         <div class="item item-4 flex-row center">
           <div class="line"></div>
-          <input type="submit" value="↓" id="SubmitButt" onclick="Clicked">
+          <input type="submit" value="↓" id="SubmitButt" />
         </div>
       </form>
       <div class="resultContainer boxprops">

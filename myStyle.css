@@ -189,7 +189,7 @@ input[type=number] {
     }
     
     #ResultYear, #ResultMonth, #ResultDay {
-        letter-spacing: 18px;
+        letter-spacing: 8px;
     }
 }
 
@@ -289,6 +289,6 @@ input[type=number] {
     }
     
     #ResultYear, #ResultMonth, #ResultDay {
-        letter-spacing: 7px;
+        letter-spacing: 5px;
     }
 }

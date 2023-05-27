@@ -7,10 +7,10 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 - [Overview]
   - [The challenge]: Age Calculator App.
   - [Screenshot]: none.
-  - [Links]: soon.
+  - [Links]: https://agecalulatorapp.netlify.app
 - [My process]
-  - [Built with]: HTML, CSS.
-  - [What I learned]: Prepare Structure UI.
+  - [Built with]: HTML, CSS, JavaScript
+  - [What I learned]: Prepare Structure UI and Learn Logical to calculate age currently.
   - [Continued development]: Build it by using React soon.
   - [Useful resources]: Grid generator, Font-size flexible.
 - [Author]: Sonsawan Ngamsom.
